@@ -8,14 +8,19 @@ const input = document.querySelector('#input');
 input.addEventListener('change', function(e) {
     //call file reader class
     const reader = new FileReader();
-    
+
     //reader callback function on load
     reader.onload = function() {
-        console.log(reader.result);
+        const img = new Image();
+        //creates a base64 string from local file
+        img.src = reader.result;
+        document.body.appendChild(img);
+
     }
 
-    reader.readAsText(input.files[0]);
+    
 
+    reader.readAsDataURL(input.files[0]);
 
 }, false);
 
