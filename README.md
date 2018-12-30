@@ -9,4 +9,4 @@ This project was created to learn and practice the File API with HTML5.
   * 
 
 ## What I've learned
-  * 
+  * Read file as text and parse into strings.
